@@ -1,7 +1,7 @@
 /*
- * TÊN STYLE: Spotify External Image Symbols - V5.16 (Mở Rộng Selector Fullscreen)
+ * TÊN STYLE: Spotify External Image Symbols - V5.22 (Thêm Icon Mic Off cho Lyrics Inactive)
  * ÁP DỤNG CHO: open.spotify.com
- * MỤC TIÊU: Loại bỏ custom icon Play/Pause và Heart/Like, cho phép SVG gốc của Spotify hoạt động lại. Thêm icon content_copy cho nút Copy Link và fullscreen/fullscreen_exit. Đã sửa lỗi icon Fullscreen không chuyển đổi bằng cách dùng aria-label và mở rộng phạm vi selector.
+ * MỤC TIÊU: Loại bỏ custom icon Play/Pause và Heart/Like, cho phép SVG gốc của Spotify hoạt động lại. Thêm icon content_copy, fullscreen/fullscreen_exit, CAST (Kết nối thiết bị), các icon điều hướng TOP BAR (Back/Forward, Search) và icon Tab Tìm kiếm Sidebar. Đã thêm icon Lời Bài Hát (Lyrics) với trạng thái Mic Off khi Inactive.
  */
 
 /* BASE URL: Nơi chứa tất cả các icon PNG (KHÔNG DÙNG BIẾN BASE URL ĐỂ TRÁNH LỖI CÚ PHÁP) */
@@ -25,19 +25,25 @@ button[data-testid="control-button-shuffle"] svg,
 button[data-testid="control-button-repeat"] svg,
 button[data-testid="control-button-npv"] svg,
 button[data-testid="pip-toggle-button"] svg,
+button[data-testid="lyrics-button"] svg, /* <--- Lyrics Button SVG */
 
-/* THÊM NÚT DUYỆT TÌM (BROWSE) VÀ SAO CHÉP LIÊN KẾT & TOÀN MÀN HÌNH */
+/* THÊM NÚT DUYỆT TÌM (BROWSE) VÀ SAO CHÉP LIÊN KẾT & TOÀN MÀN HÌNH & KẾT NỐI THIẾT BỊ */
 button[data-testid="browse-button"] svg,
-button[aria-label="Sao chép đường liên kết đến Bài hát"] svg, /* <-- NEW */
-button[data-testid="fullscreen-mode-button"] svg, /* <-- OLD FULLSCREEN SELECTOR */
-/* THÊM SELECTOR CHO NÚT FULLSCREEN/EXIT MỚI (DÙNG ARIA-LABEL) */
+button[aria-label="Sao chép đường liên kết đến Bài hát"] svg, 
+button[data-testid="fullscreen-mode-button"] svg, 
 button[aria-label*="toàn màn hình"] svg, 
 button[aria-label*="full-screen mode"] svg, 
+button[aria-label="Kết nối với một thiết bị"] svg, 
 
 button[data-testid*="-feed-button"] svg,
 button[data-testid*="context-item-image"] svg, 
 button[data-testid="volume-bar-toggle-mute-button"] svg,
-button[data-testid="home-button"] svg { 
+button[data-testid="home-button"] svg, 
+/* THÊM NÚT BACK, FORWARD, TÌM KIẾM TRÊN THANH TOP BAR VÀ TAB TÌM KIẾM SIDEBAR */
+button[data-testid="top-bar-back-button"] svg, 
+button[data-testid="top-bar-forward-button"] svg,
+button[aria-label="Tìm kiếm"] svg,
+a[data-testid="search-tab"] svg { 
     display: none !important; 
 }
 
@@ -50,14 +56,19 @@ button[data-testid="control-button-shuffle"],
 button[data-testid="control-button-repeat"],
 button[data-testid="control-button-npv"],
 button[data-testid="pip-toggle-button"],
+button[data-testid="lyrics-button"], /* <--- Lyrics Button */
 
-/* THÊM NÚT DUYỆT TÌM (BROWSE) VÀ SAO CHÉP LIÊN KẾT & TOÀN MÀN HÌNH */
+/* THÊM NÚT DUYỆT TÌM (BROWSE) VÀ SAO CHÉP LIÊN KẾT & TOÀN MÀN HÌNH & KẾT NỐI THIẾT BỊ */
 button[data-testid="browse-button"],
-button[aria-label="Sao chép đường liên kết đến Bài hát"], /* <-- NEW */
-button[data-testid="fullscreen-mode-button"], /* <-- OLD FULLSCREEN SELECTOR */
-/* THÊM SELECTOR CHO NÚT FULLSCREEN/EXIT MỚI (DÙNG ARIA-LABEL) */
+button[aria-label="Sao chép đường liên kết đến Bài hát"], 
+button[data-testid="fullscreen-mode-button"], 
 button[aria-label*="toàn màn hình"],
 button[aria-label*="full-screen mode"],
+button[aria-label="Kết nối với một thiết bị"], 
+/* THÊM NÚT BACK, FORWARD VÀ TÌM KIẾM TRÊN THANH TOP BAR */
+button[data-testid="top-bar-back-button"], 
+button[data-testid="top-bar-forward-button"], 
+button[aria-label="Tìm kiếm"], 
 
 button[data-testid*="-feed-button"],
 button[data-testid*="context-item-image"],
@@ -77,14 +88,19 @@ button[data-testid="control-button-shuffle"]::before,
 button[data-testid="control-button-repeat"]::before,
 button[data-testid="control-button-npv"]::before,
 button[data-testid="pip-toggle-button"]::before,
+button[data-testid="lyrics-button"]::before, /* <--- Lyrics Button ::before */
 
-/* THÊM NÚT DUYỆT TÌM (BROWSE) VÀ SAO CHÉP LIÊN KẾT & TOÀN MÀN HÌNH */
+/* THÊM NÚT DUYỆT TÌM (BROWSE) VÀ SAO CHÉP LIÊN KẾT & TOÀN MÀN HÌNH & KẾT NỐI THIẾT BỊ */
 button[data-testid="browse-button"]::before,
-button[aria-label="Sao chép đường liên kết đến Bài hát"]::before, /* <-- NEW */
-button[data-testid="fullscreen-mode-button"]::before, /* <-- OLD FULLSCREEN SELECTOR */
-/* THÊM SELECTOR CHO NÚT FULLSCREEN/EXIT MỚI (DÙNG ARIA-LABEL) */
+button[aria-label="Sao chép đường liên kết đến Bài hát"]::before, 
+button[data-testid="fullscreen-mode-button"]::before, 
 button[aria-label*="toàn màn hình"]::before, 
 button[aria-label*="full-screen mode"]::before,
+button[aria-label="Kết nối với một thiết bị"]::before, 
+/* THÊM NÚT BACK, FORWARD VÀ TÌM KIẾM TRÊN THANH TOP BAR */
+button[data-testid="top-bar-back-button"]::before, 
+button[data-testid="top-bar-forward-button"]::before,
+button[aria-label="Tìm kiếm"]::before, 
 
 button[data-testid*="-feed-button"]::before,
 button[data-testid="volume-bar-toggle-mute-button"]::before,
@@ -136,6 +152,13 @@ button[data-testid="volume-bar-toggle-mute-button"][aria-label]:not([aria-label=
 button[data-testid="volume-bar-toggle-mute-button"][aria-label="Tắt tiếng"]::before,
 button[data-testid="volume-bar-toggle-mute-button"][aria-label="Mute"]::before {
     background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/volume_off_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"); 
+}
+
+/* 4.5. NÚT KẾT NỐI THIẾT BỊ (CONNECT TO DEVICE - Cast Icon) */
+button[aria-label="Kết nối với một thiết bị"]::before {
+    background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/cast_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"); 
+    width: 24px !important;
+    height: 24px !important;
 }
 
 /* 5. NÚT HÀNG CHỜ (QUEUE) */
@@ -221,6 +244,21 @@ button[aria-label="Exit full-screen mode"]::before {
     height: 24px !important;
 }
 
+/* 9.6. NÚT LỜI BÀI HÁT (LYRICS) */
+/* State 1: Default/Inactive/Disabled (Use MIC OFF) */
+button[data-testid="lyrics-button"]::before { 
+    background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/mic_off_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"); /* <--- UPDATED: Mic Off for inactive */
+    width: 24px !important; 
+    height: 24px !important;
+}
+/* State 2: Active (data-active="true" hoặc aria-pressed="true") - Use MIC ON and make green */
+button[data-testid="lyrics-button"][data-active="true"]::before,
+button[data-testid="lyrics-button"][aria-pressed="true"]::before { 
+    background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/mic_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"); /* Active state should use the MIC ON icon */
+    opacity: 1; 
+    filter: sepia(100%) hue-rotate(90deg) saturate(300%) brightness(1.2); 
+}
+
 
 /* ---------------------------------------------------------------------- */
 /* THANH BÊN & THANH TRÊN (SIDEBAR ICONS) */
@@ -293,4 +331,46 @@ button[aria-label="Sao chép đường liên kết đến Bài hát"]::before {
     position: unset !important; /* Đảm bảo nó không bị căn giữa tuyệt đối */
     transform: unset !important;
     display: inline-block !important;
+}
+
+/* 15. NÚT QUAY LẠI (TOP BAR BACK) */
+button[data-testid="top-bar-back-button"]::before {
+    background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/arrow_back_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png") !important;
+    opacity: 1; 
+    width: 24px !important; 
+    height: 24px !important;
+}
+
+/* 16. NÚT TIẾP THEO (TOP BAR FORWARD) */
+button[data-testid="top-bar-forward-button"]::before {
+    background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/arrow_forward_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png") !important;
+    opacity: 1;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* 17. NÚT TÌM KIẾM (SEARCH - TOP BAR) */
+button[aria-label="Tìm kiếm"]::before {
+    background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/search_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png") !important; 
+    opacity: 1; 
+    width: 24px !important; 
+    height: 24px !important;
+}
+
+/* 18. NÚT TÌM KIẾM (SEARCH TAB - SIDEBAR) */
+a[data-testid="search-tab"]::before { 
+    content: '';
+    display: inline-block !important;
+    width: 20px !important;
+    height: 20px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
+    margin-right: 12px;
+    vertical-align: middle;
+}
+/* Trạng thái SEARCH ACTIVE */
+a[data-testid="search-tab"][aria-current="page"]::before { 
+    filter: sepia(100%) hue-rotate(90deg) saturate(300%) brightness(1.2); 
 }
