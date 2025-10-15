@@ -267,8 +267,8 @@ button[data-testid="lyrics-button"][aria-pressed="true"]::before {
 /* 10. NÚT "BẢN PHÁT HÀNH MỚI" (WHAT'S NEW FEED - Chuông) - ĐÃ TĂNG SIZE */
 button[data-testid="whats-new-feed-button"]::before {
     background-image: url("https://tuanphong3108.github.io/MaterialSymbolSpotify/circle_notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png");
-    width: 22px !important; /* <--- ĐÃ TĂNG KÍCH THƯỚC */
-    height: 22px !important; /* <--- ĐÃ TĂNG KÍCH THƯỚC */
+    width: 32px !important; /* <--- ĐÃ TĂNG KÍCH THƯỚC */
+    height: 32px !important; /* <--- ĐÃ TĂNG KÍCH THƯỚC */
     margin-right: 8px; 
     position: unset !important; 
     transform: unset !important;
