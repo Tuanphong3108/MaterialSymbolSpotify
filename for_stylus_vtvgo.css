@@ -1,0 +1,452 @@
+/* ==UserStyle==
+@name         VTVGo Notification Bell Material Symbols Override (Direct PNG URL)
+@namespace    VTVGo
+@version      1.1.7
+@description  Thay thế toàn bộ icon quan trọng (chuông, tìm kiếm, mũi tên, play, pause, volume, pip, pip-exit, share, calendar) bằng ảnh PNG từ URL ngoài để đồng bộ Material Symbols.
+@author       Gemini Dev
+@match        *://vtvgo.vn/*
+@run-at       document-start
+==/UserStyle== */
+
+/* BỎ QUA KHAI BÁO @font-face: 
+  Sử dụng direct URL PNG, không cần load font.
+*/
+
+/* --- BELL (CHUÔNG) ICON OVERRIDE --- */
+
+/* 1. Target Container (Cái bao bọc icon chuông) */
+.micro-icon.icon-bell {
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+
+    /* Đảm bảo nó không có padding/margin làm lệch */
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    /* Xóa mọi nội dung font hoặc SVG cũ */
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-bell svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-bell {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/circle_notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- SEARCH (TÌM KIẾM) ICON OVERRIDE --- */
+
+/* 1. Target Container (Cái bao bọc icon tìm kiếm) */
+.micro-icon.icon-search {
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+
+    /* Đảm bảo nó không có padding/margin làm lệch */
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    /* Xóa mọi nội dung font hoặc SVG cũ */
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-search svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-search {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- CHEVRON RIGHT (MŨI TÊN TIẾN) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-chevron-right) */
+.micro-icon.icon-chevron-right { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-chevron-right svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-chevron-right {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/arrow_forward_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- CHEVRON LEFT (MŨI TÊN LÙI) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-chevron-left) */
+.micro-icon.icon-chevron-left { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-chevron-left svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-chevron-left {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/arrow_back_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- PLAY (PHÁT) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-play) */
+.micro-icon.icon-play { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-play svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-play {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/play_arrow_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- VOLUME (ÂM LƯỢNG LỚN) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-volume) */
+.micro-icon.icon-volume { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-volume svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-volume {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/volume_up_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- VOLUME LOW (ÂM LƯỢNG NHỎ) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-volume-low) */
+.micro-icon.icon-volume-low { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-volume-low svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-volume-low {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/volume_down_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- VOLUME MUTED (TẮT ÂM) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-volume-muted) */
+.micro-icon.icon-volume-muted { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-volume-muted svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-volume-muted {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/no_sound_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- PAUSE (TẠM DỪNG) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-pause) */
+.micro-icon.icon-pause { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-pause svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-pause {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/pause_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- PIP (PICTURE-IN-PICTURE) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-pip) */
+.micro-icon.icon-pip { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-pip svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-pip {
+    /* Đã đổi tên file theo yêu cầu (từ picture_in_picture_... sang pip_...) */
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/pip_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- PIP EXIT (THOÁT PICTURE-IN-PICTURE) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-pip-exit) */
+.micro-icon.icon-pip-exit { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-pip-exit svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-pip-exit {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/pip_exit_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- SHARE (CHIA SẺ) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-share) */
+.micro-icon.icon-share { 
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-share svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-share {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/share_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    /* Giảm kích thước ảnh hiển thị xuống 21x21px theo yêu cầu của Phong */
+    background-size: 21px 21px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- CALENDAR/SCHEDULE (LỊCH PHÁT SÓNG) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-calendar-days) */
+.micro-icon.icon-calendar-days {
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-calendar-days svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-calendar-days {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/calendar_clock_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
+    /* Đã giảm kích thước ảnh hiển thị xuống 21x21px theo yêu cầu của Phong (để đồng bộ với icon Share) */
+    background-size: 21px 21px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
