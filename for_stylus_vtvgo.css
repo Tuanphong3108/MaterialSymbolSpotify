@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name         VTVGo Notification Bell Material Symbols Override (Direct PNG URL)
 @namespace    VTVGo
-@version      1.1.7
-@description  Thay thế toàn bộ icon quan trọng (chuông, tìm kiếm, mũi tên, play, pause, volume, pip, pip-exit, share, calendar) bằng ảnh PNG từ URL ngoài để đồng bộ Material Symbols.
+@version      1.4.0
+@description  Thay thế toàn bộ icon quan trọng (chuông, tìm kiếm, mũi tên, play, pause, volume, pip, pip-exit, share, calendar, back-top, close) và icon Mua Gói bằng ảnh PNG từ URL ngoài để đồng bộ Material Symbols.
 @author       Gemini Dev
 @match        *://vtvgo.vn/*
 @run-at       document-start
@@ -410,7 +410,6 @@
 .micro-icon.icon-share {
     background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/share_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
     
-    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
     /* Giảm kích thước ảnh hiển thị xuống 21x21px theo yêu cầu của Phong */
     background-size: 21px 21px !important;
     background-repeat: no-repeat !important;
@@ -444,9 +443,101 @@
 .micro-icon.icon-calendar-days {
     background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/calendar_clock_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
     
-    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px */
     /* Đã giảm kích thước ảnh hiển thị xuống 21x21px theo yêu cầu của Phong (để đồng bộ với icon Share) */
     background-size: 21px 21px !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- BACK TO TOP (CUỘN LÊN ĐẦU) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-back-top) */
+.micro-icon.icon-back-top {
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-back-top svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-back-top {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/vertical_align_top_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px (kích thước chuẩn) */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- CLOSE (ĐÓNG) ICON OVERRIDE --- */
+
+/* 1. Target Container (Class chính xác: .icon-close) */
+.micro-icon.icon-close {
+    /* Thiết lập kích thước cố định cho container (24x24px) */
+    width: 24px !important; 
+    height: 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    content: none !important;
+    background-color: transparent !important;
+}
+
+/* 2. ẨN SVG CŨ ĐI: Key để không bị trùng icon */
+.micro-icon.icon-close svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+
+/* 3. INJECT ICON MỚI: Dùng background-image trực tiếp từ URL */
+.micro-icon.icon-close {
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/cancel_24dp_999999_FILL0_wght400_GRAD0_opsz24.png') !important;
+    
+    /* Đảm bảo ảnh hiển thị vừa vặn trong container 24x24px (kích thước chuẩn) */
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ------------------------------------ */
+/* --- SUBSCRIPTIONS (MUA GÓI) ICON INJECTION --- */
+
+/* 1. Force the button to use flexbox for proper text + icon alignment */
+.micro-button.a.ao.t.bq.bd.cw.cx.cy.cz.da.db.dc.dy.dz.ea.eb.ec.bn.ed.ee.ef.eg.eh.ei.ej.ek.el {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important; 
+}
+
+/* 2. Use the :before pseudo-element to inject the icon */
+.micro-button.a.ao.t.bq.bd.cw.cx.cy.cz.da.db.dc.dy.dz.ea.eb.ec.bn.ed.ee.ef.eg.eh.ei.ej.ek.el:before {
+    content: '' !important; /* Bắt buộc để chèn background-image */
+    
+    /* Kích thước và Icon */
+    width: 24px !important; 
+    height: 24px !important;
+    /* CẬP NHẬT MÀU MỚI: E3E3E3 -> 999999 */
+    background-image: url('https://tuanphong3108.github.io/MaterialSymbolSpotify/subscriptions_24dp_999999_FILL0_wght400_GRAD0_opsz24.png') !important;
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    
+    /* Khoảng cách giữa icon và chữ "Mua gói" */
+    margin-right: 4px !important; 
 }
